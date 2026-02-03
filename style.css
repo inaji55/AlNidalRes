@@ -1,154 +1,144 @@
-/* GLOBAL STYLES */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root { 
+    --gold: #c5a059; 
+    --dark-bg: #111; 
+    --card-bg: #1e1e1e; 
+    --white: #ffffff; 
+    --muted: #aaa; 
 }
 
-/* 1. NAVBAR (NAVY & GOLD THEME) */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0b132b; /* اللون الكحلي الغامق جداً */
-    color: #c5a059; /* اللون الذهبي للوجو */
-    padding: 20px 8%;
-    border-bottom: 3px solid #c5a059; /* خط ذهبي فاصل */
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0; 
+    background: var(--dark-bg); 
+    color: var(--white); 
+    overflow-x: hidden; 
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #c5a059;
+/* Navbar with Image Logo Support */
+nav { 
+    background: #000; 
+    padding: 15px 8%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 2px solid var(--gold); 
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
+.nav-logo-img { height: 45px; }
 
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
+.nav-links a { 
+    color: var(--white); 
+    text-decoration: none; 
+    margin-left: 25px; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
     font-weight: 500;
-    transition: 0.3s;
-    font-size: 15px;
+    transition: 0.3s; 
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #c5a059; /* يتغير للذهبي عند التمرير */
-}
+.nav-links a:hover, .nav-links a.active-link { color: var(--gold); }
 
-/* 2. SLIDER */
+/* Swiper Slider Styling */
 .slider-container {
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
+    margin: 40px auto;
+    border: 1px solid var(--gold);
 }
 
-.slider img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+.swiper { height: 55vh; }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Customizing Arrows to match the drawing theme */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--gold) !important;
+    background: rgba(0,0,0,0.5);
+    padding: 30px 20px;
+    transform: scale(0.6);
 }
 
-/* 3. VISION SECTION */
+/* Vision Section (Your Drawing Layout) */
 .vision-section {
-    padding: 80px 0;
-    background: #fdfdfd;
+    padding: 80px 5%;
+    position: relative;
 }
 
 .vision-container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    text-align: center;
+    position: relative;
 }
 
-.vision-logo-box {
-    background: white;
-    display: inline-block;
-    padding: 15px;
-    border: 1px solid #c5a059; /* برواز ذهبي للوجو */
-    margin-bottom: -40px;
-    position: relative;
-    z-index: 2;
+.vision-badge {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-bg);
+    border: 1px solid var(--gold);
+    padding: 10px;
+    z-index: 20;
 }
 
 .vision-content {
-    background-color: #f8f9fa; /* لون خلفية الصندوق */
+    background: var(--card-bg);
     padding: 70px 40px 40px;
-    border: 1px solid #eee;
-}
-
-.vision-content h2 {
-    color: #0b132b;
-    margin-bottom: 20px;
-}
-
-/* 4. MEDIA SECTION */
-.media-section {
-    padding: 40px 8%;
-}
-
-.media-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.media-grid h3 {
+    border: 1px solid #333;
     text-align: center;
-    color: #0b132b;
-    border-bottom: 2px solid #c5a059;
-    display: inline-block;
-    margin-bottom: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-iframe {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+h1 { color: var(--gold); font-size: 1.8rem; margin-bottom: 20px; }
+
+.gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    width: 60%;
+    margin: 15px auto;
 }
 
-/* 5. FOOTER */
-footer {
-    background: #0b132b;
-    color: white;
-    padding: 30px 0;
-    margin-top: 50px;
+/* Footer Styling */
+footer { 
+    background: #000; 
+    padding: 40px 5%; 
+    border-top: 2px solid var(--gold); 
 }
 
 .footer-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
 
-.social-links a {
-    color: white;
-    font-size: 24px;
-    margin: 0 15px;
-    transition: 0.3s;
+.footer-label, .contact-link { color: var(--gold); font-weight: bold; text-transform: uppercase; }
+
+.social-icons a { 
+    color: var(--white); 
+    font-size: 1.4rem; 
+    margin: 0 10px; 
+    transition: 0.3s; 
 }
 
-.social-links a:hover {
-    color: #c5a059; /* أيقونات السوشيال ميديا تصير ذهبي عند اللمس */
-}
+.social-icons a:hover { color: var(--gold); }
 
-.footer-phone {
-    font-size: 18px;
-    font-weight: bold;
-    color: #c5a059;
-}
+/* Mobile Menu */
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.menu-toggle span { width: 25px; height: 3px; background: var(--gold); }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-    .media-grid { grid-template-columns: 1fr; }
+    .menu-toggle { display: flex; }
+    .nav-links { 
+        display: none; flex-direction: column; position: absolute; top: 100%; left: 0; 
+        width: 100%; background: #000; padding: 20px 0; text-align: center; 
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { margin: 15px 0; font-size: 1.1rem; }
     .footer-wrap { flex-direction: column; gap: 20px; }
-    .nav-links { display: none; }
+    .vision-content { padding: 60px 20px 30px; }
 }
