@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alnidal | Real State</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Alnidal | Home</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -13,9 +12,11 @@
 
     <nav>
         <a href="index.html" class="nav-logo">
-            <img src="Images/AlNidal Logo.png" alt="Alnidal Logo">
+            <img src="Images/AlNidal%20Logo.png" alt="Alnidal Logo">
         </a>
+        
         <div class="menu-btn" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+        
         <div class="nav-links" id="nav-menu">
             <a href="index.html" class="active-link">Home</a>
             <a href="old-projects.html">Old Projects</a>
@@ -38,7 +39,7 @@
 
         <section class="vision-section">
             <div class="middle-logo-box">
-                <img src="Images/AlNidal Logo.png" alt="Alnidal Brand">            
+                <img src="Images/AlNidal%20Logo.png" alt="Alnidal Brand">
             </div>
             <div class="vision-content">
                 <h2>Our Vision</h2>
@@ -52,37 +53,29 @@
     </div>
 
     <footer>
-        <div style="color: #444; font-size: 0.7rem; letter-spacing: 1px;">CONTACT US</div>
-        
-        <a href="tel:+971591234567" class="footer-contact">059 123 4567</a>
         <div class="footer-socials">
-            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
+        <a href="tel:+971591234567" class="footer-contact">059 123 4567</a>
+        <div style="color: #444; font-size: 0.7rem; letter-spacing: 1px;">CONTACT US</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Carousel Script
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: { delay: 4000 },
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         });
 
-        // Mobile Menu Toggle Fix
         const toggleBtn = document.getElementById('mobile-toggle');
         const navMenu = document.getElementById('nav-menu');
 
         toggleBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            // Changes icon from bars to X when active
-            const icon = toggleBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
         });
     </script>
 </body>
-
 </html>
