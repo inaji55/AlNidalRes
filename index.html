@@ -1,74 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate - Al-Nidal Theme</title>
+    <title>Alnidal Res 6 | Luxury Living</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">LOGO</div> 
-        
-        <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Old Projects</a></li>
-            <li><a href="#">Current Project</a></li>
-            <li><a href="#">Upcoming</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
+    <nav>
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/150x50/000000/c5a059?text=LOGO" alt="Logo" class="nav-logo-img">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links" id="nav-list">
+            <a href="index.html" class="active-link">Home</a>
+            <a href="roof.html">Roof</a>
+            <a href="typical.html">Typical</a>
+            <a href="ground.html">Ground</a>
+            <a href="basement.html">Basement</a>
+        </div>
     </nav>
 
-    <header class="slider-container">
-        <div class="slider">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Apartment">
-            <div class="slider-nav">
-                <button class="prev">❮</button>
-                <button class="next">❯</button>
+    <div class="slider-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"></div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-    </header>
+    </div>
 
     <section class="vision-section">
         <div class="vision-container">
-            <div class="vision-logo-box">
-                <img src="https://via.placeholder.com/80?text=LOGO" alt="Small Logo">
+            <div class="vision-badge">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200" alt="Badge">
             </div>
             <div class="vision-content">
-                <h2>Our Vision</h2>
-                <div class="text-box">
-                    <p>We build more than just walls; we create homes. Our vision is to lead the real estate market by providing luxury and high-quality residential solutions that match your lifestyle.</p>
+                <h1>Our Vision</h1>
+                <div class="vision-inner-text">
+                    <p>Building dreams with a touch of gold. We create living spaces that blend innovation with elegance, providing unparalleled quality and comfort.</p>
+                    <div class="gold-line"></div>
+                    <div class="gold-line"></div>
+                    <div class="gold-line"></div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="media-section">
-        <div class="media-grid">
-            <div class="video-container">
-                <h3>Take a Tour</h3>
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="map-container">
-                <h3>Project Location</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13537.472481005117!2d35.8647!3d31.9539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDU3JzE0LjAiTiAzNcKwNTEnNTIuOSJF!5e0!3m2!1sen!2sjo!4v1625000000000" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-wrap">
-            <span class="contact-label">Contact Us</span>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/962790000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <span class="footer-label">Contact Us</span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <span class="footer-phone">059 123 4567</span>
+            <a href="tel:0512345678" class="contact-link">051 234 5678</a>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", { 
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, 
+            autoplay: { delay: 3500 }, 
+            loop: true,
+            grabCursor: true
+        });
+
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
