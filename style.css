@@ -1,0 +1,154 @@
+/* GLOBAL STYLES */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 1. NAVBAR (NAVY & GOLD THEME) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b132b; /* اللون الكحلي الغامق جداً */
+    color: #c5a059; /* اللون الذهبي للوجو */
+    padding: 20px 8%;
+    border-bottom: 3px solid #c5a059; /* خط ذهبي فاصل */
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #c5a059;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #c5a059; /* يتغير للذهبي عند التمرير */
+}
+
+/* 2. SLIDER */
+.slider-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* 3. VISION SECTION */
+.vision-section {
+    padding: 80px 0;
+    background: #fdfdfd;
+}
+
+.vision-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vision-logo-box {
+    background: white;
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #c5a059; /* برواز ذهبي للوجو */
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.vision-content {
+    background-color: #f8f9fa; /* لون خلفية الصندوق */
+    padding: 70px 40px 40px;
+    border: 1px solid #eee;
+}
+
+.vision-content h2 {
+    color: #0b132b;
+    margin-bottom: 20px;
+}
+
+/* 4. MEDIA SECTION */
+.media-section {
+    padding: 40px 8%;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.media-grid h3 {
+    text-align: center;
+    color: #0b132b;
+    border-bottom: 2px solid #c5a059;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 5. FOOTER */
+footer {
+    background: #0b132b;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #c5a059; /* أيقونات السوشيال ميديا تصير ذهبي عند اللمس */
+}
+
+.footer-phone {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c5a059;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .media-grid { grid-template-columns: 1fr; }
+    .footer-wrap { flex-direction: column; gap: 20px; }
+    .nav-links { display: none; }
+}
