@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Projects | Alnidal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="Images/AlNidal Logo.png" alt="Alnidal Logo">
+        </a>
+        <div class="menu-btn" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="old-projects.html" class="active-link">Old Projects</a>
+            <a href="current-project.html">Current Project</a>
+            <a href="upcoming.html">Upcoming</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="project-entry">
+            <h2 class="project-title">AlNidal Res 5</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
+                    <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200"></div>
+                </div>
+                <div class="swiper-button-next" style="color: var(--gold)"></div>
+                <div class="swiper-button-prev" style="color: var(--gold)"></div>
+            </div>
+            <div class="project-info">
+                <p><span class="label">Location:</span> City Center, District 5</p>
+            </div>
+        </section>
+
+        <section class="project-entry">
+            <h2 class="project-title">AlNidal Res 4</h2>
+            <div class="static-image">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000">
+            </div>
+            <div class="project-info">
+                <p><span class="label">Location:</span> West End Plaza</p>
+            </div>
+        </section>
+
+        <section class="project-entry">
+            <h2 class="project-title">AlNidal Res 3</h2>
+            <div class="static-image">
+                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1000">
+            </div>
+            <div class="project-info">
+                <p><span class="label">Location:</span> North Hills</p>
+            </div>
+        </section>
+
+        </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="tel:+971591234567" class="footer-contact">059 123 4567</a>
+        <div style="color: #444; font-size: 0.7rem;">CONTACT US</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

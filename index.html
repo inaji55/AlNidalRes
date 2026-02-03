@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alnidal Res 6 | Luxury Living</title>
+    <title>Alnidal | Real State</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -11,74 +11,75 @@
 <body>
 
     <nav>
-        <div class="logo-container">
-            <img src="https://via.placeholder.com/150x50/000000/c5a059?text=LOGO" alt="Logo" class="nav-logo-img">
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="nav-links" id="nav-list">
+        <a href="index.html" class="nav-logo">
+            <img src="Images/AlNidal Logo.png" alt="Alnidal Logo">
+        </a>
+        <div class="menu-btn" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="nav-menu">
             <a href="index.html" class="active-link">Home</a>
-            <a href="roof.html">Roof</a>
-            <a href="typical.html">Typical</a>
-            <a href="ground.html">Ground</a>
-            <a href="basement.html">Basement</a>
+            <a href="old-projects.html">Old Projects</a>
+            <a href="current-project.html">Current Project</a>
+            <a href="#">Upcoming</a>
+            <a href="#">About Us</a>
         </div>
     </nav>
 
-    <div class="slider-container">
+    <div class="container">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
-                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600607687940-4e524cb350b1?q=80&w=1200"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next" style="color: var(--gold)"></div>
+            <div class="swiper-button-prev" style="color: var(--gold)"></div>
         </div>
-    </div>
 
-    <section class="vision-section">
-        <div class="vision-container">
-            <div class="vision-badge">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200" alt="Badge">
+        <section class="vision-section">
+            <div class="middle-logo-box">
+                <img src="Images/AlNidal Logo.png" alt="Alnidal Brand">            
             </div>
             <div class="vision-content">
-                <h1>Our Vision</h1>
-                <div class="vision-inner-text">
-                    <p>Building dreams with a touch of gold. We create living spaces that blend innovation with elegance, providing unparalleled quality and comfort.</p>
-                    <div class="gold-line"></div>
-                    <div class="gold-line"></div>
-                    <div class="gold-line"></div>
-                </div>
+                <h2>Our Vision</h2>
+                <p>
+                    Redefining urban elegance through architectural precision. 
+                    We build more than structures; we build legacies of 
+                    modern luxury and comfort.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
-        <div class="footer-wrap">
-            <span class="footer-label">Contact Us</span>
-            <div class="social-icons">
-                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <a href="tel:0512345678" class="contact-link">051 234 5678</a>
+        <div style="color: #444; font-size: 0.7rem; letter-spacing: 1px;">CONTACT US</div>
+        
+        <a href="tel:+971591234567" class="footer-contact">059 123 4567</a>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", { 
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, 
-            autoplay: { delay: 3500 }, 
+        // Carousel Script
+        var swiper = new Swiper(".mySwiper", {
             loop: true,
-            grabCursor: true
+            autoplay: { delay: 4000 },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         });
 
-        const menuToggle = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-list');
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
+        // Mobile Menu Toggle Fix
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Changes icon from bars to X when active
+            const icon = toggleBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
     </script>
 </body>

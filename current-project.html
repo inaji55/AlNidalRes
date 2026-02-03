@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Project | AlNidal Res 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="Images/AlNidal Logo.png" alt="Alnidal Logo">
+        </a>
+        <div class="menu-btn" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="old-projects.html">Old Projects</a>
+            <a href="current-project.html" class="active-link">Current Project</a>
+            <a href="#">Upcoming</a>
+            <a href="#">About Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="project-main-title">AlNidal Res 6</h2>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200"></div>
+            </div>
+            <div class="swiper-button-next" style="color: var(--gold)"></div>
+            <div class="swiper-button-prev" style="color: var(--gold)"></div>
+        </div>
+
+        <div class="plans-grid">
+            <a href="Images/ground-plan.jpg" target="_blank" class="plan-card">
+                <img src="https://via.placeholder.com/400x300/1a1a1a/c5a059?text=Ground" alt="Ground Plan">
+                <span>Ground</span>
+            </a>
+            <a href="Images/f1-plan.jpg" target="_blank" class="plan-card">
+                <img src="https://via.placeholder.com/400x300/1a1a1a/c5a059?text=F1" alt="F1 Plan">
+                <span>F1</span>
+            </a>
+            <a href="Images/typical-plan.jpg" target="_blank" class="plan-card">
+                <img src="https://via.placeholder.com/400x300/1a1a1a/c5a059?text=Typical" alt="Typical Plan">
+                <span>Typical</span>
+            </a>
+            <a href="Images/roof-plan.jpg" target="_blank" class="plan-card">
+                <img src="https://via.placeholder.com/400x300/1a1a1a/c5a059?text=Roof" alt="Roof Plan">
+                <span>Roof</span>
+            </a>
+        </div>
+
+        <div class="media-section map-container">
+            <h3 class="gold-label">Location Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.1!2d35.2!3d31.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDU0JzAwLjAiTiAzNcKwMTInMDAuMCJF!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="media-section video-container">
+            <h3 class="gold-label">Project Video</h3>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="tel:+971591234567" class="footer-contact">059 123 4567</a>
+        <div style="color: #444; font-size: 0.7rem;">CONTACT US</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        toggleBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
+</body>
+</html>
