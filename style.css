@@ -372,3 +372,41 @@ footer {
     width: 100%;
     height: 100%;
 }
+/* 1. Add space at the bottom of the site so content isn't covered */
+body {
+    padding-bottom: 80px; 
+}
+
+/* 2. Lock the footer to the bottom of the screen */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* Ensures it stays above all content and carousels */
+    
+    background: rgba(0, 0, 0, 0.95); /* Slight transparency for a premium feel */
+    backdrop-filter: blur(5px); /* Blurs content behind it */
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--grey);
+    box-sizing: border-box;
+}
+
+/* Ensure social icons and contact text look sharp in the fixed bar */
+.footer-socials a { 
+    color: var(--white); 
+    font-size: 1.1rem; 
+    margin-right: 15px; 
+}
+
+.footer-contact { 
+    color: var(--gold); 
+    font-weight: 700; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    letter-spacing: 1px;
+}
+
