@@ -471,3 +471,14 @@ footer {
     .floor-header { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 
+/* About Page Specific Adjustments */
+.vision-content h3.gold-label {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Ensure the container on the About page has enough bottom padding 
+   to clear the fixed footer */
+.container {
+    padding-bottom: 100px;
+}
